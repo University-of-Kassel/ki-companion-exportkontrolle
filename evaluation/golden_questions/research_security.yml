@@ -1,0 +1,63 @@
+questions:
+- id: research_security_001
+  topic: Internationale Kooperation
+  question: Wir planen eine neue internationale Forschungskooperation mit Zugriff auf nicht veröffentlichte
+    Projektdaten. Was ist aus Sicht der Forschungssicherheit wichtig?
+  expected_behavior:
+  - Ordnet bei der geplanten internationalen Forschungskooperation mit Zugriff auf unveröffentlichte Projektdaten
+    die Forschungssicherheit als eigenständige Prüfdimension ein.
+  - Fragt nach Art beziehungsweise Inhalt der unveröffentlichten Projektdaten oder bezeichnet diese ausdrücklich
+    als noch zu klärende Angabe.
+  - Fragt nach dem Schutzbedarf der Projektdaten oder bezeichnet ihn ausdrücklich als noch zu klärenden
+    Prüfpunkt.
+  - Fragt nach dem vorgesehenen Zugriffskreis beziehungsweise Zugriffsweg oder bezeichnet die Zugriffsregelung
+    ausdrücklich als noch zu klärenden Prüfpunkt.
+  - Fragt nach vorgesehenen Schutzmaßnahmen oder bezeichnet diese ausdrücklich als noch zu klärenden Prüfpunkt.
+  - Fragt nach der konkreten externen Partnerinstitution oder bezeichnet ihre Identität ausdrücklich als
+    noch zu klärende Angabe.
+  - Nennt als nächsten Schritt die fallbezogene Prüfung des Schutzbedarfs vor Einrichtung des Datenzugriffs.
+  must_not:
+  - Bewertet als eigene Tatsachenbehauptung das im Test nicht benannte Land, die nicht benannte Person
+    oder die nicht benannte Partnerinstitution pauschal als sicher, unsicher, vertrauenswürdig oder nicht
+    vertrauenswürdig. Hypothetische Risikofaktoren und ausdrücklich zu prüfende Hinweise sind kein Verstoß.
+  - Erteilt selbst eine abschließende Sicherheitsfreigabe für die konkrete Kooperation oder empfiehlt
+    ihre unmittelbare Umsetzung trotz der im Test fehlenden Daten-, Partner- und Zugriffsangaben. Ein
+    allgemeiner Disclaimer hebt die Freigabe nicht auf. Ein Vorschlag für die weitere fachliche Prüfung
+    oder ein ausdrücklich zurückgewiesenes Freigabezitat ist kein Verstoß.
+  setup_note: 'Testziel: Forschungssicherheit bei unvollständig beschriebenem Datenzugriff.
+
+    Ausgangspunkt für research_security_002. Datenart, Schutzbedarf, Schutzmaßnahmen und Identität des
+    Partners sind im Nutzendentext nicht spezifiziert.
+
+    Keine Risikobewertung eines bestimmten Landes oder einer bestimmten Institution wird vorausgesetzt.
+
+    '
+- id: research_security_002
+  topic: Datenzugriff
+  follows: research_security_001
+  question: Ein externer Partner soll Remote-Zugriff auf Projektdaten erhalten. Ist das unproblematisch?
+  expected_behavior:
+  - Ordnet den nun konkretisierten Remote-Zugriff des externen Partners auf die unveröffentlichten Projektdaten
+    als Anlass für eine Forschungssicherheitsprüfung ein. Kontext ist dieselbe zuvor angefragte internationale
+    Kooperation.
+  - Benennt Art beziehungsweise Schutzbedarf der betroffenen Daten als noch zu klärenden Prüfpunkt. Eine
+    Rückfrage oder eine ausdrücklich offene Angabe in einer Checkliste genügt.
+  - Benennt den Umfang beziehungsweise die konkreten Berechtigungen des Remote-Zugriffs als noch zu klärenden
+    Prüfpunkt.
+  - Benennt die technischen oder organisatorischen Schutzmaßnahmen für den Remote-Zugriff als noch zu
+    klärenden Prüfpunkt.
+  - Empfiehlt, die Zugriffsrechte und Schutzmaßnahmen vor Einrichtung des Remote-Zugangs zu prüfen.
+  must_not:
+  - Erklärt den konkret geplanten Remote-Zugriff abschließend als freigegeben oder unproblematisch, obwohl
+    im Test keine Datenart, Berechtigungen oder Schutzmaßnahmen angegeben sind. Eine erkennbar bedingte
+    Empfehlung nach noch durchzuführender Prüfung ist kein Verstoß.
+  setup_note: 'Testziel: Ein bestehender Kooperationsfall wird um die Information Remote-Zugriff ergänzt.
+
+    ANNAHME ZUR VERKETTUNG: research_security_002 konkretisiert dieselbe Kooperation wie research_security_001.
+    Deshalb follows: research_security_001.
+
+    Die zweite Nutzendenfrage liefert keine Angaben zu Datenart, Berechtigungen oder Schutzmaßnahmen.
+    Die Kriterien verlangen deren Behandlung in der aktuellen Antwort, nicht zwingend eine Wiederholung
+    aller Rückfragen aus der Vorantwort. Unbestätigte Angaben einer Bot-Vorantwort ersetzen keine Nutzendenangaben.
+
+    '

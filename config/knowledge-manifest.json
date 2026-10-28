@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "edition": "researcher",
+  "documents": [
+    {
+      "id": "KF-00",
+      "path": "knowledge/core/KF-00_Einordnung_und_Nutzungshinweise_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-00b",
+      "path": "knowledge/core/KF-00b_Mindestangaben_Fallaufnahme_v1.3-public.1.md"
+    },
+    {
+      "id": "KF-09d",
+      "path": "knowledge/core/KF-09d_Nagoya_Protokoll_und_ABS_Erstpruefung_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-12",
+      "path": "knowledge/core/KF-12_Begriffe_und_Referenzformen_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-98",
+      "path": "knowledge/core/KF-98_Weiterfuehrende_Informationen_und_Anlaufstellen_v1.6-public.2.md"
+    },
+    {
+      "id": "KF-99",
+      "path": "knowledge/core/KF-99_Aktualitaetshinweise_Exportkontrolle_und_Forschungssicherheit_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-01",
+      "path": "knowledge/export_control/KF-01_Rechtsgrundlagen_Exportkontrolle_v1.4-public.1.md"
+    },
+    {
+      "id": "KF-01a",
+      "path": "knowledge/export_control/KF-01a_Praxisregeln_Exportkontrolle_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-01b",
+      "path": "knowledge/export_control/KF-01b_Dual-Use_Indikatoren_und_Parameterfragen_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-01c",
+      "path": "knowledge/export_control/KF-01c_US_Re_Exportkontrollrecht_Orientierung_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-01d",
+      "path": "knowledge/export_control/KF-01d_Gueterlisten-Navigation_v1.3-public.1.md"
+    },
+    {
+      "id": "KF-02",
+      "path": "knowledge/export_control/KF-02_Entscheidungsbaum_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-03",
+      "path": "knowledge/export_control/KF-03_Szenarien_Exportkontrolle_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-03d",
+      "path": "knowledge/export_control/KF-03d_EU_Verbringung_und_Anhang_IV_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-03f",
+      "path": "knowledge/export_control/KF-03f_US_Reexportkontrolle_Grundlagen_v1.0-public.1.md"
+    },
+    {
+      "id": "KF-03g",
+      "path": "knowledge/export_control/KF-03g_US_Reexportkontrolle_Prueflogik_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-03h",
+      "path": "knowledge/export_control/KF-03h_US_Reexportkontrolle_Red_Flags_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-03i",
+      "path": "knowledge/export_control/KF-03i_US_Reexportkontrolle_Formulierungen_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-04",
+      "path": "knowledge/export_control/KF-04_Verfahren_Exportkontrolle_v1.3-public.1.md"
+    },
+    {
+      "id": "KF-09",
+      "path": "knowledge/export_control/KF-09_Embargos_und_Sanktionen_Grundlagen_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-09a",
+      "path": "knowledge/export_control/KF-09a_Russland_Belarus_Ukraine_Pruefhinweise_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-09b",
+      "path": "knowledge/export_control/KF-09b_Iran_Embargo_und_Sanktionen_Pruefhinweise_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-09c",
+      "path": "knowledge/export_control/KF-09c_Sanktionslistenpruefung_und_Umgehungsindikatoren_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-05",
+      "path": "knowledge/research_security/KF-05_Grundlagen_Forschungssicherheit_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-05a",
+      "path": "knowledge/research_security/KF-05a_Risikodimension_Forschungssicherheit_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-06",
+      "path": "knowledge/research_security/KF-06_Entscheidungsbaum_Forschungssicherheit_v1.2-public.2.md"
+    },
+    {
+      "id": "KF-07",
+      "path": "knowledge/research_security/KF-07_Szenarien_Forschungssicherheit_v2.2-public.1.md"
+    },
+    {
+      "id": "KF-07a",
+      "path": "knowledge/research_security/KF-07a_Methodencheck_Internationale_Kooperation_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-07b",
+      "path": "knowledge/research_security/KF-07b_Besondere_Governance_Sensibilitaeten_v1.1-public.1.md"
+    },
+    {
+      "id": "KF-07c",
+      "path": "knowledge/research_security/KF-07c_China_CSC_Seven_Sons_und_Talentprogramme_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-07d",
+      "path": "knowledge/research_security/KF-07d_Iran_Hochschulen_Foerderprogramme_und_NEF_v1.2-public.1.md"
+    },
+    {
+      "id": "KF-07e",
+      "path": "knowledge/research_security/KF-07e_Gastforschende_Stipendien_und_Zugriffssteuerung_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-07f",
+      "path": "knowledge/research_security/KF-07f_Daten_Software_Cloud_und_IT_Zugaenge_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-08",
+      "path": "knowledge/research_security/KF-08_Verfahren_Forschungssicherheit_v1.3-public.1.md"
+    },
+    {
+      "id": "KF-13",
+      "path": "knowledge/templates/KF-13_Falltemplates_Exportkontrolle_Forschendenbot_v1.1-public.2.md"
+    },
+    {
+      "id": "KF-14",
+      "path": "knowledge/templates/KF-14_Antworttemplates_Forschendenbot_v1.1-public.2.md"
+    }
+  ]
+}

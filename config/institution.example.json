@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "institution_name": "{{INSTITUTION_NAME}}",
+  "facts_reviewed": false,
+  "facts_reviewed_on": null,
+  "contacts": [
+    {
+      "area": "export_control",
+      "office": "{{EXPORT_CONTROL_OFFICE}}",
+      "unit": "{{EXPORT_CONTROL_UNIT}}",
+      "email": "{{EXPORT_CONTROL_EMAIL}}",
+      "url": "{{EXPORT_CONTROL_URL}}",
+      "people": []
+    }
+  ],
+  "procedures_reviewed": false,
+  "procedures_reviewed_on": null,
+  "procedures": []
+}

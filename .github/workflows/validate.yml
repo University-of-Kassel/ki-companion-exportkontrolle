@@ -1,0 +1,40 @@
+name: Validate public researcher edition
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install build dependency
+        run: python -m pip install -r requirements.txt
+      - name: Validate public sources
+        run: python scripts/validate_repository.py --public-release
+      - name: Run offline unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Build unconfigured review bundle
+        run: python scripts/build_bundle.py --mode review --out dist/ci-review
+      - name: Export unevaluated test plan
+        run: python scripts/prepare_evaluation.py --out dist/evaluation-plan.json
+      - name: Package public source only
+        run: python scripts/package_release.py --out dist/ki-companion-exportkontrolle-source.zip
+      - name: Retain public source archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: ki-companion-exportkontrolle-source-${{ matrix.os }}
+          path: dist/ki-companion-exportkontrolle-source.zip
+          if-no-files-found: error

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "institution_name": "Beispieluniversität",
+  "facts_reviewed": true,
+  "facts_reviewed_on": "2026-10-22",
+  "contacts": [
+    {
+      "area": "export_control",
+      "office": "Exportkontrollstelle der Beispieluniversität",
+      "unit": "Referat Forschungsservice",
+      "email": "exportkontrolle@example.invalid",
+      "url": "https://example.invalid/exportkontrolle",
+      "people": [
+        {
+          "name": "Person A",
+          "role": "Exportkontrollbeauftragte"
+        },
+        {
+          "name": "Person B",
+          "role": "Ausfuhrverantwortlicher"
+        }
+      ]
+    }
+  ],
+  "procedures_reviewed": false,
+  "procedures_reviewed_on": null,
+  "procedures": []
+}

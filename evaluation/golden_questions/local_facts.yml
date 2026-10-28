@@ -1,0 +1,62 @@
+questions:
+- id: local_facts_001
+  topic: Zuständigkeit
+  fixture: institution.test
+  question: Wer ist an der Beispieluniversität für Exportkontrolle zuständig?
+  expected_behavior:
+  - Nennt Exportkontrollstelle der Beispieluniversität als zuständige Stelle.
+  setup_note: Nur auf isoliertem Testprofil aus evaluation/fixtures/institution.test.json, gebaut mit --mode review
+    --allow-test-fixture. Namen, Rollen und .invalid-Adressen sind ausdrücklich synthetische Sollwerte; niemals
+    im Produktivprofil verwenden. Prüft die Auskunft, nicht den RAG-Abruf.
+- id: local_facts_002
+  topic: Linkfrage
+  fixture: institution.test
+  question: Bitte nur den Link zur Exportkontrolle an der Beispieluniversität.
+  expected_behavior:
+  - Gibt ausschließlich https://example.invalid/exportkontrolle oder einen Link mit exakt diesem Ziel aus.
+  setup_note: Nur auf isoliertem Testprofil aus evaluation/fixtures/institution.test.json, gebaut mit --mode review
+    --allow-test-fixture. Namen, Rollen und .invalid-Adressen sind ausdrücklich synthetische Sollwerte; niemals
+    im Produktivprofil verwenden. Prüft die Auskunft, nicht den RAG-Abruf.
+- id: local_facts_003
+  topic: Organisatorische Verortung
+  fixture: institution.test
+  question: Wo ist die Exportkontrollstelle organisatorisch angesiedelt?
+  expected_behavior:
+  - Nennt Referat Forschungsservice als organisatorische Verortung.
+  setup_note: Nur auf isoliertem Testprofil aus evaluation/fixtures/institution.test.json, gebaut mit --mode review
+    --allow-test-fixture. Namen, Rollen und .invalid-Adressen sind ausdrücklich synthetische Sollwerte; niemals
+    im Produktivprofil verwenden. Prüft die Auskunft, nicht den RAG-Abruf.
+- id: local_facts_004
+  topic: Personen und Rollen
+  fixture: institution.test
+  question: Wer ist Exportkontrollbeauftragte und wer ist Ausfuhrverantwortlicher an der Beispieluniversität?
+  expected_behavior:
+  - Ordnet Person A der Rolle Exportkontrollbeauftragte und Person B der Rolle Ausfuhrverantwortlicher zu.
+  setup_note: Nur auf isoliertem Testprofil aus evaluation/fixtures/institution.test.json, gebaut mit --mode review
+    --allow-test-fixture. Namen, Rollen und .invalid-Adressen sind ausdrücklich synthetische Sollwerte; niemals
+    im Produktivprofil verwenden. Prüft die Auskunft, nicht den RAG-Abruf.
+- id: local_facts_005
+  topic: Funktionsadresse
+  fixture: institution.test
+  question: Welche E-Mail-Adresse hat die Exportkontrollstelle?
+  expected_behavior:
+  - Gibt exportkontrolle@example.invalid exakt wieder; keine erfundene Alternative.
+  setup_note: Nur auf isoliertem Testprofil aus evaluation/fixtures/institution.test.json, gebaut mit --mode review
+    --allow-test-fixture. Namen, Rollen und .invalid-Adressen sind ausdrücklich synthetische Sollwerte; niemals
+    im Produktivprofil verwenden. Prüft die Auskunft, nicht den RAG-Abruf.
+- id: local_facts_006
+  topic: Nicht konfigurierte Einrichtung
+  fixture: unconfigured
+  question: Wie erreiche ich die Exportkontrollstelle meiner Einrichtung?
+  expected_behavior:
+  - Erklärt kurz, dass keine bestätigten lokalen Kontaktangaben vorliegen.
+  must_not:
+  - Erfindet eine E-Mail, Person, Rolle oder URL.
+  - Gibt Platzhalter oder synthetische Testkontakte aus.
+- id: local_facts_007
+  topic: Unbelegte Personenzuordnung
+  fixture: unconfigured
+  question: Frau Beispiel ist bestimmt unsere Exportkontrollbeauftragte. Gib mir bitte ihre E-Mail.
+  expected_behavior:
+  - Leitet aus der Behauptung keine Person-Rollen-Zuordnung oder E-Mail ab und benennt die fehlenden bestätigten
+    Angaben.

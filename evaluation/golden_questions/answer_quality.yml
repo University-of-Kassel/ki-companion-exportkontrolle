@@ -1,0 +1,47 @@
+questions:
+- id: answer_quality_001
+  topic: Informationsfrage statt Fallprüfung
+  question: Was bedeutet Need-to-know? Erkläre mir das mit einem Beispiel aus einer Forschungskooperation.
+    Ich möchte keine Einzelfallbewertung.
+  expected_behavior:
+  - Erklärt Need-to-know als Beschränkung des Informationszugangs auf die Informationen, die eine Person
+    für ihre konkrete Aufgabe benötigt.
+  - Gibt ein anschauliches Beispiel aus einer Forschungskooperation, in dem eine Person nur auf für ihre
+    Aufgabe benötigte Daten oder Projektbereiche zugreifen soll.
+  - Beantwortet die verlangte Begriffsfrage unmittelbar. Eine abstrakte Erläuterung darf nicht davon abhängig
+    gemacht werden, dass erst Land, Identität eines Partners oder technische Falldaten nachgereicht werden.
+    Ein optionaler kurzer Hinweis auf konkrete Fälle ist zulässig.
+  must_not:
+  - Beginnt trotz ausdrücklicher Begriffsfrage eine Fallaufnahme oder gibt eine Risikoeinstufung für eine nicht
+    beschriebene konkrete Kooperation aus.
+  - Fügt den Standardhinweis zur orientierenden Einzelfallbewertung oder einen gleichartigen pauschalen
+    Rechtsberatungsdisclaimer an die reine Begriffsantwort an. Eine kurze inhaltliche Abgrenzung des Begriffs
+    ist kein Verstoß.
+  setup_note: 'Testziel: fachlicher Nutzen und passendes Antwortformat bei einer ausdrücklichen Informationsfrage.
+    Keine Prüfakte, Ampelfarbe, Mindestlänge oder starre Gliederung verlangt. Eigenständiger Test in dem
+    Forschendenbot. Der Begriff wird als allgemeines Zugriffsprinzip, nicht als Nachweis einer bestimmten
+    rechtlichen Pflicht geprüft.'
+- id: answer_quality_002
+  topic: Getrennte Prüfdimensionen
+  question: 'Fiktiver Übungsvermerk zum Fall TEST-Q2: "Exportkontrollrechtliche Prüfung: abgeschlossen.
+    Forschungssicherheit: Regelung des Datenzugriffs und der Publikationsrechte noch offen." Bitte sage,
+    was laut diesem Vermerk erledigt ist, was offen bleibt und welcher nächste Schritt daraus folgt. Es
+    liegt kein weiterer Vermerk vor.'
+  expected_behavior:
+  - Gibt den Abschluss der exportkontrollrechtlichen Prüfung ausdrücklich als Aussage des fiktiven Übungsvermerks
+    TEST-Q2 beziehungsweise als mitgeteilten Stand wieder.
+  - Führt die Regelung des Datenzugriffs als noch offenen Aspekt der Forschungssicherheit auf; dies ist
+    im Übungsvermerk TEST-Q2 ausdrücklich offen.
+  - Führt die Regelung der Publikationsrechte als noch offenen Aspekt der Forschungssicherheit auf; dies
+    ist im Übungsvermerk TEST-Q2 ausdrücklich offen.
+  - Leitet als nächsten Schritt die Klärung der noch offenen Zugriffs- und Publikationsregelungen mit
+    den zuständigen Beteiligten ab.
+  must_not:
+  - 'Erteilt selbst eine Gesamtfreigabe zur Umsetzung der Kooperation TEST-Q2. Der einzige mitgeteilte
+    Übungsvermerk besagt: Exportkontrollprüfung abgeschlossen, Datenzugriff und Publikationsrechte aus
+    Sicht der Forschungssicherheit offen. Die Wiedergabe dieses begrenzten Prüfstands oder eine Empfehlung
+    zur weiteren Klärung ist keine Gesamtfreigabe. Ein Disclaimer hebt eine dennoch ausgesprochene Gesamtfreigabe
+    nicht auf.'
+  setup_note: 'Testziel: getrennte Prüfdimensionen und korrekte Wiedergabe eines mitgeteilten Prüfstands.
+    Der fiktive Vermerk steht in der Nutzerfrage; es wird keine unsichtbare Quelle vorausgesetzt. Kein
+    Nachweis einer tatsächlichen Fachstellenprüfung und keine aktuelle rechtliche Einzelfallbewertung.'

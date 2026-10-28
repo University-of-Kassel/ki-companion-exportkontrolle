@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Bitte zitieren Sie die verwendete Release-Version oder den Commit."
+type: software
+title: "KI-Companion Exportkontrolle"
+version: "1.0.0"
+license: Apache-2.0
+repository-code: "https://github.com/University-of-Kassel/ki-companion-exportkontrolle"
+url: "https://github.com/University-of-Kassel/ki-companion-exportkontrolle"
+authors:
+  - family-names: "Felgen"
+    given-names: "Nina"
+    affiliation: "Universität Kassel"
+keywords:
+  - Exportkontrolle
+  - Forschungssicherheit
+  - Forschungsmanagement
+  - KI-Assistenz
+abstract: "Institutionell anpassbare Forschendenassistenz zur Orientierung zu Exportkontrolle und Forschungssicherheit."

@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: Apache-2.0
+# Offline checks for the leading GitLab repository. No model/API deploy.
+image: python:3.11-slim
+
+stages:
+  - validate
+
+variables:
+  PYTHONUTF8: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE == "push"'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
+    - if: '$CI_COMMIT_TAG'
+
+validate-public-edition:
+  stage: validate
+  before_script:
+    - python -m pip install -r requirements.txt
+  script:
+    - python scripts/validate_repository.py --public-release
+    - python -m unittest discover -s tests -v
+    - python scripts/build_bundle.py --mode review --out dist/ci-review
+    - python scripts/prepare_evaluation.py --out dist/evaluation-plan.json
+    - python scripts/package_release.py --out dist/ki-companion-exportkontrolle-source.zip
+  artifacts:
+    when: on_success
+    name: ki-companion-exportkontrolle-source-$CI_COMMIT_SHORT_SHA
+    paths:
+      - dist/ki-companion-exportkontrolle-source.zip
+    expire_in: 30 days

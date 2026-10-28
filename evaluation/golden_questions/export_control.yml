@@ -1,0 +1,98 @@
+questions:
+- id: export_control_001
+  topic: Technologietransfer
+  question: Ich möchte unveröffentlichte Simulationssoftware mit einem Forschungspartner außerhalb der
+    EU teilen. Was muss ich beachten?
+  expected_behavior:
+  - Ordnet die geplante Weitergabe unveröffentlichter Simulationssoftware an einen Forschungspartner außerhalb
+    der EU als exportkontrollrechtlich prüfbedürftigen Vorgang beziehungsweise möglichen Technologietransfer
+    ein.
+  - Fragt nach Funktion oder technischen Merkmalen der Simulationssoftware oder bezeichnet diese ausdrücklich
+    als noch zu klärende Angaben; im Test wurden dazu keine Einzelheiten genannt.
+  - Fragt nach dem konkreten Empfänger beziehungsweise der Partnerinstitution oder bezeichnet dessen Identität
+    ausdrücklich als noch zu klärende Angabe.
+  - Fragt nach dem konkreten Empfängerland oder bezeichnet es ausdrücklich als noch zu klärende Angabe;
+    bekannt ist nur, dass der Partner außerhalb der EU sitzt.
+  - Fragt nach dem vorgesehenen Zugriffskreis oder bezeichnet die zugriffsberechtigten Personen ausdrücklich
+    als noch zu klärenden Punkt.
+  - Fragt nach dem vorgesehenen Übermittlungs- beziehungsweise Zugriffsweg oder bezeichnet diesen ausdrücklich
+    als noch zu klärenden Punkt.
+  - Fragt nach der beabsichtigten Endverwendung der Software oder bezeichnet diese ausdrücklich als noch
+    zu klärende Angabe.
+  - Nennt als nächsten Schritt eine fachliche Prüfung vor der Weitergabe der Software.
+  must_not:
+  - Erlaubt als eigene konkrete Handlungsempfehlung die Weitergabe beziehungsweise den Zugriff bereits
+    jetzt ohne die noch erforderliche Klärung oder erklärt den beschriebenen Fall selbst abschließend
+    als freigegeben, genehmigt oder exportkontrollrechtlich nicht betroffen. Ein allgemeiner Disclaimer
+    wie "keine Rechtsberatung" oder "unverbindlich" hebt eine solche praktische Freigabe nicht auf. Eine
+    Empfehlung zur fachlichen Prüfung, eine ausdrücklich von noch ausstehender Prüfung abhängige Handlung
+    oder ein zurückgewiesenes Zitat ist kein Verstoß. Die zutreffend zugeordnete Wiedergabe eines tatsächlich
+    im Test mitgeteilten Fachstellenentscheids ist keine eigene Freigabe.
+  - Ordnet dem hier technisch nicht hinreichend beschriebenen konkreten Fall eine bestimmte Güterlistennummer
+    als feststehendes Klassifizierungsergebnis zu. Eine ausdrücklich als noch fachlich zu prüfender Kandidat
+    bezeichnete Nummer, eine allgemeine Erläuterung oder ein zurückgewiesenes Beispiel ist kein Verstoß.
+    Ein pauschaler Disclaimer hebt eine im selben Text dennoch als feststehend ausgegebene Zuordnung nicht
+    auf.
+  setup_note: 'Testziel: Unvollständiger Transferfall; Einordnung und gezielte Informationsaufnahme.
+
+    Einzeltest und Ausgangspunkt für export_control_002. Bekannt sind ausschließlich unveröffentlichte
+    Simulationssoftware, geplante Weitergabe und ein Forschungspartner außerhalb der EU.
+
+    Fragen und ausdrücklich als offen markierte Prüfpunkte sind gleichwertig. Weder eine bestimmte Ampelfarbe
+    noch eine bestimmte Güterlistennummer wird als Sollwert gesetzt.
+
+    '
+- id: export_control_002
+  topic: Grundlagenforschung
+  follows: export_control_001
+  question: Es handelt sich um Grundlagenforschung. Ist Exportkontrolle damit ausgeschlossen?
+  expected_behavior:
+  - Bezieht die Antwort auf die Weitergabe unveröffentlichter Simulationssoftware an einen Forschungspartner
+    außerhalb der EU, zu der nun ergänzt wurde, dass es sich um Grundlagenforschung handelt. Ein erkennbarer
+    Bezug auf die Software oder deren geplante Weitergabe genügt.
+  - Benennt den konkreten Technologieinhalt als Gegenstand der noch erforderlichen Prüfung; die bloße
+    Wiederholung des Wortes Grundlagenforschung genügt nicht.
+  - Benennt die geplante Weitergabe beziehungsweise den möglichen Technologietransfer als Gegenstand der
+    fallbezogenen Prüfung.
+  - Empfiehlt eine fachliche Einordnung des beschriebenen Falls unter Berücksichtigung der neu genannten
+    Grundlagenforschung.
+  must_not:
+  - Erklärt als eigene Schlussfolgerung, allein die Bezeichnung Grundlagenforschung schließe Exportkontrolle
+    aus oder erübrige jede weitere Prüfung der Softwareweitergabe. Eine Verneinung oder eine kritische
+    Wiedergabe dieser Behauptung ist kein Verstoß.
+  setup_note: 'Testziel: Eine nachträgliche Angabe zur Grundlagenforschung wird im bestehenden Transferfall
+    eingeordnet.
+
+    ANNAHME ZUR VERKETTUNG: Die Formulierung "Es handelt sich" bezieht sich auf export_control_001. Deshalb
+    follows: export_control_001. Die Frage wird nicht als unabhängige Definitionsfrage ausgeführt.
+
+    Nur die aktuelle Antwort wird bewertet. Der Judge erhält den erforderlichen Sachverhalt in den Kriterien;
+    eine Wiederholung bestimmter Sätze aus der tatsächlichen Vorantwort wird nicht verlangt.
+
+    Die pauschale Ausnahmebehauptung ist ausschließlich ein must_not, nicht zusätzlich ein gespiegeltes
+    Positivkriterium.
+
+    '
+- id: export_control_003
+  topic: Open Source
+  question: Der Code ist Open Source. Muss ich Exportkontrolle trotzdem prüfen?
+  expected_behavior:
+  - Fragt für den als Open Source bezeichneten Code nach seinem technischen Inhalt beziehungsweise seiner
+    Funktion oder bezeichnet dies ausdrücklich als noch zu klärenden Prüfpunkt.
+  - Fragt nach der konkreten Form der Bereitstellung beziehungsweise Weitergabe des Codes oder bezeichnet
+    diese ausdrücklich als noch zu klärenden Prüfpunkt.
+  - Empfiehlt eine Einzelfallprüfung, die den Open-Source-Status und die konkrete Bereitstellung des Codes
+    berücksichtigt.
+  must_not:
+  - Leitet als eigene Schlussfolgerung allein aus der Bezeichnung Open Source ab, dass die konkrete Weitergabe
+    erlaubt oder exportkontrollrechtlich nicht betroffen sei oder jede Exportkontrollprüfung entfallen
+    könne. Die bloße Erläuterung möglicherweise einschlägiger Ausnahmen ist kein Verstoß.
+  setup_note: 'Testziel: Umgang mit dem pauschalen Hinweis Open Source.
+
+    Bewusst eigenständig: Kein follows auf den Fall unveröffentlichter Software. Die vorliegende Frage
+    klärt nicht, ob lediglich eine Lizenz gemeint ist oder ob sich der Veröffentlichungsstatus geändert
+    hat. Eine Verkettung würde ohne weitere Angaben einen zusätzlichen Interpretationsfall erzeugen.
+
+    Der Open-Source-Status als alleinige Freigabebegründung wird ausschließlich in must_not geprüft.
+
+    '

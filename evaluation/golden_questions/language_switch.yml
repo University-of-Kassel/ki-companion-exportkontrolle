@@ -1,0 +1,45 @@
+questions:
+- id: language_001
+  topic: Sprachwechsel Englisch
+  question: Can I share unpublished research software with a partner in the US?
+  expected_behavior:
+  - The entire substantive answer to the English question about sharing unpublished research software
+    with a partner in the US is in English, including headings, caveats, follow-up questions and recommendations.
+    Proper names, official source titles, URLs, code and established abbreviations do not count as language
+    mixing.
+  - Identifies sharing the unpublished research software with the US partner as requiring export-control-oriented
+    review.
+  - Prioritizes at most three decisive follow-up questions, counting independently answerable subquestions.
+    Does not ask again for the already supplied US location.
+  - Selects the most useful missing facts from function, recipient, end use and access arrangement without
+    requiring all four to be asked in this turn.
+  setup_note: English-language response and initial orientation. Starting point for language_002. The
+    three-question limit applies; four requested facts are not mandatory.
+- id: language_002
+  topic: Sprachwechsel Deutsch
+  follows: language_001
+  question: Und was wäre dabei aus Sicht der Forschungssicherheit wichtig?
+  expected_behavior:
+  - Die gesamte inhaltliche Antwort auf die jetzt deutsch formulierte Folgefrage ist auf Deutsch, einschließlich
+    Überschriften, Einschränkungen, Rückfragen und Empfehlungen. Eigennamen, offizielle Quellentitel,
+    URLs, Code und etablierte Fachausdrücke wie Open Source oder Remote-Zugriff zählen nicht als Sprachmischung.
+  - Behandelt Forschungssicherheit als eigenständige Prüfdimension neben Exportkontrolle. Gesprächskontext
+    ist die zuvor auf Englisch angefragte Weitergabe unveröffentlichter Forschungssoftware an einen Partner
+    in den USA.
+  - Benennt den Schutzbedarf der unveröffentlichten Software beziehungsweise ihrer nicht öffentlichen
+    Inhalte als konkreten Prüfpunkt der Forschungssicherheit.
+  - Benennt den vorgesehenen Zugriffskreis oder den Zugriffsweg auf die Software als konkreten Prüfpunkt
+    der Forschungssicherheit.
+  - Benennt die konkrete externe Partnerinstitution als zu prüfenden Beteiligten; bekannt ist nur, dass
+    der Partner in den USA sitzt.
+  setup_note: 'Testziel: Echter Wechsel Englisch zu Deutsch im selben Gespräch sowie fachlicher Perspektivwechsel.
+
+    follows: language_001 ist erforderlich, weil "dabei" auf den vorausgehenden Softwarefall verweist.
+    Der Runner spielt die Frage und die tatsächliche Bot-Antwort aus language_001 ein.
+
+    Der Judge sieht diese Vorantwort nicht. Deshalb verlangen die Kriterien konkrete Inhalte in der aktuellen
+    Antwort, aber keinen Vergleich mit vorherigen Formulierungen und keine wortgleiche Wiederholung. Die
+    fachlichen Prüfpunkte dürfen als Hinweise formuliert sein; erneute identische Rückfragen sind nicht
+    vorgeschrieben.
+
+    '
